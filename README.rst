@@ -5,20 +5,18 @@ This is the Arduino software library to access the Termopar Nanoshield, a thermo
 
 * Source code: https://github.com/circuitar/Nanoshield_Termopar
 * Documentation: http://nanoshield-termopar.readthedocs.org/
-* Reference board: `Termopar Nanoshield`_ from Circuitar_.
+* Reference board: `Termopar Nanoshield`_ from Circuitar_
 
 Library features include:
 
-* Get external temperature (hot junction).
-* Get internal temperature (cold junction).
-* Thermocouple type selection.
-* Continuous conversion mode.
-* Enable/disable averaging of 2, 4, 8 or 16 samples.
-* Error checking: open circuit and under/overvoltage.
+* Get external temperature (hot junction)
+* Get internal temperature (cold junction)
+* Thermocouple type selection
+* Continuous conversion mode
+* Enable/disable averaging of 2, 4, 8 or 16 samples
+* Error checking: open circuit and under/overvoltage
 
 To install, just click **Download ZIP** and install it using **Sketch > Include Library... > Add .ZIP Library** in the Arduino IDE.
-
-----
 
 The following examples_ are provided:
 
