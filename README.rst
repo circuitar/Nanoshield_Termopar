@@ -20,8 +20,8 @@ To install, just click **Download ZIP** and install it using **Sketch > Include 
 
 The following examples_ are provided:
 
-- MultiThermometer_ read temperature from multiple Termopar Nanoshields, with different thermocouple types.
-- SimpleThermometer_ simple serial port thermometer application for a K-type thermocouple (the default type).
+- MultiThermometer_: read temperature from multiple Termopar Nanoshields, with different thermocouple types.
+- SimpleThermometer_: simple serial port thermometer application for a K-type thermocouple (the default type).
 
 .. _`Termopar Nanoshield`: https://www.circuitar.com/nanoshields/modules/termopar/
 .. _Circuitar: https://www.circuitar.com/
