@@ -14,7 +14,7 @@ Library features include:
 * Thermocouple type selection
 * Continuous conversion mode
 * Enable/disable averaging of 2, 4, 8 or 16 samples
-* Error checking: open circuit and under/overvoltage
+* Error checking: open circuit, under/overvoltage and temperature out of range
 
 To install, just click **Download ZIP** and install it using **Sketch > Include Library... > Add .ZIP Library** in the Arduino IDE.
 
