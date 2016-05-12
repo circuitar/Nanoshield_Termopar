@@ -83,7 +83,7 @@ void Nanoshield_Termopar::read() {
   SPI.endTransaction();
 
   internal = (cj / 4) * 0.015625;
-  external = ((int32_t)(ltc >= (1 << 23) ? ltc - (1 << 24) : ltc) / 32) * 0.0078125;
+  external = ((int32_t)(ltc >= (1UL << 23) ? ltc - (1UL << 24) : ltc) / 32) * 0.0078125;
 }
 
 double Nanoshield_Termopar::getInternal() {
