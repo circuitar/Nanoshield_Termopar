@@ -67,23 +67,23 @@ void Nanoshield_Termopar::begin() {
 }
 
 void Nanoshield_Termopar::read() {
-	uint16_t cj = 0;
-	uint32_t ltc = 0;
+  uint16_t cj = 0;
+  uint32_t ltc = 0;
 
   SPI.beginTransaction(spiSettings);
   digitalWrite(cs, LOW);
   SPI.transfer(MAX31856_REG_CJTH | MAX31856_REG_READ);
   cj |= (uint16_t)SPI.transfer(0) << 8;
   cj |= SPI.transfer(0);
-  ltc |= (uint32_t)SPI.transfer(0) << 24;
   ltc |= (uint32_t)SPI.transfer(0) << 16;
   ltc |= (uint32_t)SPI.transfer(0) << 8;
-	fault = SPI.transfer(0);
+  ltc |= (uint32_t)SPI.transfer(0);
+  fault = SPI.transfer(0);
   digitalWrite(cs, HIGH);
   SPI.endTransaction();
 
   internal = (cj / 4) * 0.015625;
-  external = (ltc / 8192) * 0.0078125;
+  external = ((int32_t)(ltc >= (1 << 23) ? ltc - (1 << 24) : ltc) / 32) * 0.0078125;
 }
 
 double Nanoshield_Termopar::getInternal() {
