@@ -77,13 +77,25 @@ void Nanoshield_Termopar::read() {
   cj |= SPI.transfer(0);
   ltc |= (uint32_t)SPI.transfer(0) << 16;
   ltc |= (uint32_t)SPI.transfer(0) << 8;
-  ltc |= (uint32_t)SPI.transfer(0);
+  ltc |= SPI.transfer(0);
   fault = SPI.transfer(0);
   digitalWrite(cs, HIGH);
   SPI.endTransaction();
 
-  internal = (cj / 4) * 0.015625;
-  external = ((int32_t)(ltc >= (1UL << 23) ? ltc - (1UL << 24) : ltc) / 32) * 0.0078125;
+  cj >>= 2;
+  internal = (cj >= (1U << 13) ? cj - (1UL << 14) : cj) * 0.015625;
+
+  int32_t signed_ltc = (int32_t)(ltc >= (1UL << 23) ? ltc - (1UL << 24) : ltc) / 32;
+  switch (type) {
+    case TC_TYPE_VOLTAGE_GAIN_8:
+      external = signed_ltc / (8 * 1.6 * (1UL << 17));
+      break;
+    case TC_TYPE_VOLTAGE_GAIN_32:
+      external = signed_ltc / (32 * 1.6 * (1UL << 17));
+      break;
+    default:
+      external = signed_ltc * 0.0078125;
+  }
 }
 
 double Nanoshield_Termopar::getInternal() {

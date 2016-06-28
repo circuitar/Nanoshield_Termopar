@@ -20,7 +20,9 @@ enum TcType {
     TC_TYPE_N,
     TC_TYPE_R,
     TC_TYPE_S,
-    TC_TYPE_T
+    TC_TYPE_T,
+    TC_TYPE_VOLTAGE_GAIN_8 = 0x8,
+    TC_TYPE_VOLTAGE_GAIN_32 = 0xC
 };
 
 enum TcAveraging {
