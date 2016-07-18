@@ -1,6 +1,6 @@
 /**
- * @file SimpleThermometer.ino
- * This a simple serial port thermometer application using the Termopar Nanoshield.
+ * @file SerialThermometer.ino
+ * This is a simple serial port thermometer application using the Termopar Nanoshield.
  * 
  * Copyright (c) 2015 Circuitar
  * This software is released under the MIT license. See the attached LICENSE file for details.
@@ -24,13 +24,13 @@ void setup()
 
 void printErrors() {
   if (tc.isOpen()) {
-    Serial.print("(Open circuit) ");
+    Serial.print("Open circuit");
   } else if (tc.isOverUnderVoltage()) {
-    Serial.print("(Overvoltage/Undervotage) ");
+    Serial.print("Overvoltage/Undervoltage");
   } else if (tc.isInternalOutOfRange()) {
-    Serial.print("(Internal temperature out of range) ");
+    Serial.print("Internal temperature (cold junction) out of range)");
   } else if (tc.isExternalOutOfRange()) {
-    Serial.print("(External temperature out of range) ");
+    Serial.print("External temperature (hot junction) out of range");
   }
 }
 
@@ -50,7 +50,7 @@ void loop()
   }
   Serial.println();
 
-  // Wait for next second
+  // Wait for next reading
   delay(1000);
 }
 

@@ -20,15 +20,18 @@ To install, just click **Download ZIP** and install it using **Sketch > Include 
 
 The following examples_ are provided:
 
+- SerialThermometer_: simple serial port thermometer application.
 - MultiThermometer_: read temperature from multiple Termopar Nanoshields, with different thermocouple types.
-- SimpleThermometer_: simple serial port thermometer application for a K-type thermocouple (the default type).
+- LcdThermometer_: thermometer application using the `LCD Nanoshield`_ to display the data.
 - RawVoltage_: measure raw thermocouple voltage and cold junction temperature.
 
 .. _`Termopar Nanoshield`: https://www.circuitar.com/nanoshields/modules/termopar/
 .. _Circuitar: https://www.circuitar.com/
 .. _examples: https://github.com/circuitar/Nanoshield_Termopar/tree/master/examples
+.. _SerialThermometer: https://github.com/circuitar/Nanoshield_Termopar/blob/master/examples/SerialThermometer/SerialThermometer.ino
 .. _MultiThermometer: https://github.com/circuitar/Nanoshield_Termopar/blob/master/examples/MultiThermometer/MultiThermometer.ino
-.. _SimpleThermometer: https://github.com/circuitar/Nanoshield_Termopar/blob/master/examples/SimpleThermometer/SimpleThermometer.ino
+.. _LcdThermometer: https://github.com/circuitar/Nanoshield_Termopar/blob/master/examples/LcdThermometer/LcdThermometer.ino
+.. _`LCD Nanoshield`: https://www.circuitar.com/nanoshields/modules/lcd/
 .. _RawVoltage: https://github.com/circuitar/Nanoshield_Termopar/blob/master/examples/RawVoltage/RawVoltage.ino
 
 ----
