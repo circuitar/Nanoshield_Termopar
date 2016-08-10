@@ -46,7 +46,7 @@ void loop()
     Serial.print("Cold junction: ");
     Serial.print(tc.getInternal());
     Serial.print(" degC | Thermocouple voltage: ");
-    Serial.print(tc.getExternal() * 1000);
+    Serial.print(tc.getExternal() * 1000, 3);
     Serial.print(" mV");
   }
   Serial.println();
