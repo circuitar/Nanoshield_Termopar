@@ -1,6 +1,6 @@
 /**
  * @file MultiThermometer.ino
- * Read temperatures from multiple Termopar Nanoshields.
+ * Read temperatures from multiple Termopar Nanoshields, with different thermocouple types.
  * 
  * Copyright (c) 2015 Circuitar
  * This software is released under the MIT license. See the attached LICENSE file for details.
@@ -8,13 +8,13 @@
 #include <SPI.h>
 #include "Nanoshield_Termopar.h"
 
-// Create an array of three thermocouples
+// Create an array of five thermocouples of different types
 Nanoshield_Termopar tc[] = {
-  Nanoshield_Termopar(4, TC_TYPE_K, TC_AVG_OFF),
-  Nanoshield_Termopar(7, TC_TYPE_J, TC_AVG_2_SAMPLES),
-  Nanoshield_Termopar(8, TC_TYPE_S, TC_AVG_4_SAMPLES),
-  Nanoshield_Termopar(10, TC_TYPE_T, TC_AVG_8_SAMPLES),
-  Nanoshield_Termopar(A3, TC_TYPE_B, TC_AVG_16_SAMPLES)
+  Nanoshield_Termopar(4, TC_TYPE_K, TC_AVG_OFF),        // Jumper on D4, type K, no averaging
+  Nanoshield_Termopar(7, TC_TYPE_J, TC_AVG_2_SAMPLES),  // Jumper on D7, type J, averaging of 2 samples
+  Nanoshield_Termopar(8, TC_TYPE_S, TC_AVG_4_SAMPLES),  // Jumper on D8, type S, averaging of 4 samples
+  Nanoshield_Termopar(10, TC_TYPE_T, TC_AVG_8_SAMPLES), // Jumper on D10, type T, averaging of 8 samples
+  Nanoshield_Termopar(A3, TC_TYPE_B, TC_AVG_16_SAMPLES) // Jumper on A3, type B, averaging of 16 samples
 };
 
 const int numModules = sizeof(tc) / sizeof(Nanoshield_Termopar);
