@@ -25,6 +25,7 @@ The following examples_ are provided:
 - MultiThermometerCSV_: read temperature from multiple Termopar Nanoshields, generating a CSV output.
 - LcdThermometer_: thermometer application using the `LCD Nanoshield`_ to display the data.
 - RawVoltage_: measure raw thermocouple voltage and cold junction temperature.
+- TemperatureDatalogger_: read temperature from multiple Termopar Nanoshields and log it into an SD card.
 
 .. _`Termopar Nanoshield`: https://www.circuitar.com/nanoshields/modules/termopar/
 .. _Circuitar: https://www.circuitar.com/
@@ -35,6 +36,7 @@ The following examples_ are provided:
 .. _LcdThermometer: https://github.com/circuitar/Nanoshield_Termopar/blob/master/examples/LcdThermometer/LcdThermometer.ino
 .. _`LCD Nanoshield`: https://www.circuitar.com/nanoshields/modules/lcd/
 .. _RawVoltage: https://github.com/circuitar/Nanoshield_Termopar/blob/master/examples/RawVoltage/RawVoltage.ino
+.. _TemperatureDatalogger: https://github.com/circuitar/Nanoshield_Termopar/blob/master/examples/TemperatureDatalogger/TemperatureDatalogger.ino
 
 ----
 
