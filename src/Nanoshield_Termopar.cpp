@@ -32,13 +32,14 @@
 
 SPISettings Nanoshield_Termopar::spiSettings = SPISettings(1000000, MSBFIRST, SPI_MODE1);
 
-Nanoshield_Termopar::Nanoshield_Termopar(uint8_t cs, TcType type, TcAveraging avg) {
+Nanoshield_Termopar::Nanoshield_Termopar(uint8_t cs, TcType type, TcAveraging avg, TcOcd ocd) {
   this->cs = cs;
   this->type = type;
   this->avg = avg;
-	this->internal = 0;
-	this->external = 0;
-	this->fault = 0;
+  this->ocd = ocd;
+  this->internal = 0;
+  this->external = 0;
+  this->fault = 0;
 }
 
 void Nanoshield_Termopar::begin() {
@@ -50,18 +51,16 @@ void Nanoshield_Termopar::begin() {
   SPI.beginTransaction(spiSettings);
   digitalWrite(cs, LOW);
   SPI.transfer(MAX31856_REG_CR0 | MAX31856_REG_WRITE);
-  SPI.transfer(0x90); // Setup CR0 register:
-                      //   Automatic conversion mode
-                      //   Enable fault detection mode 1 (OCFAULT)
-                      //   Cold juntion sensor enabled
-                      //   Fault detection in comparator mode
-                      //   Noise rejection = 60Hz
+  SPI.transfer(0x82 | ((uint8_t)ocd << 4)); // Setup CR0 register:
+                                            //   Automatic conversion mode
+                                            //   Set open circuit fault detection mode
+                                            //   Cold juntion sensor enabled
+                                            //   Fault detection in comparator mode
+                                            //   Clear fault status
+                                            //   Noise rejection = 60Hz
   SPI.transfer(((uint8_t)avg << 4) | ((uint8_t)type & 0x0F)); // Setup CR1 register:
                                                               //   Setup selected averaging mode
                                                               //   Setup selected thermocouple type
-  SPI.transfer(0x03); // Setup MASK register:
-                      //   Enable overvoltage/undervoltage detection
-                      //   Enable open circuit detection
   digitalWrite(cs, HIGH);
   SPI.endTransaction();
 }

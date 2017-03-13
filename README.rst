@@ -26,6 +26,7 @@ The following examples_ are provided:
 - LcdThermometer_: thermometer application using the `LCD Nanoshield`_ to display the data.
 - RawVoltage_: measure raw thermocouple voltage and cold junction temperature.
 - TemperatureDatalogger_: read temperature from multiple Termopar Nanoshields and log it into an SD card.
+- OpenCircuitDetection_: disable the open circuit detection mode or change its parameters. Might be useful when using long thermocouple wires.
 
 .. _`Termopar Nanoshield`: https://www.circuitar.com/nanoshields/modules/termopar/
 .. _Circuitar: https://www.circuitar.com/
@@ -37,6 +38,7 @@ The following examples_ are provided:
 .. _`LCD Nanoshield`: https://www.circuitar.com/nanoshields/modules/lcd/
 .. _RawVoltage: https://github.com/circuitar/Nanoshield_Termopar/blob/master/examples/RawVoltage/RawVoltage.ino
 .. _TemperatureDatalogger: https://github.com/circuitar/Nanoshield_Termopar/blob/master/examples/TemperatureDatalogger/TemperatureDatalogger.ino
+.. _OpenCircuitDetection: https://github.com/circuitar/Nanoshield_Termopar/blob/master/examples/OpenCircuitDetection/OpenCircuitDetection.ino
 
 ----
 

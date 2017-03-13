@@ -33,6 +33,13 @@ enum TcAveraging {
     TC_AVG_16_SAMPLES
 };
 
+enum TcOcd {
+    TC_OCD_OFF,
+    TC_OCD_15_MS,
+    TC_OCD_37_MS,
+    TC_OCD_125_MS
+};
+
 class Nanoshield_Termopar {
   public:
     /**
@@ -43,8 +50,9 @@ class Nanoshield_Termopar {
      * @param cs Chip select pin to access Termopar Nanoshield.
      * @param type Thermocouple type.
      * @param avg Averaging mode.
+     * @param ocd Open circuit detection mode.
      */
-    Nanoshield_Termopar(uint8_t cs = 8, TcType type = TC_TYPE_K, TcAveraging avg = TC_AVG_OFF);
+    Nanoshield_Termopar(uint8_t cs = 8, TcType type = TC_TYPE_K, TcAveraging avg = TC_AVG_OFF, TcOcd ocd = TC_OCD_15_MS);
 
     /**
      * @brief Initializes the module.
@@ -124,6 +132,7 @@ class Nanoshield_Termopar {
     uint8_t cs;
     TcType type;
     TcAveraging avg;
+    TcOcd ocd;
     double internal;
     double external;
     uint8_t fault;
