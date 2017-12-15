@@ -8,10 +8,10 @@ begin	KEYWORD2
 read	KEYWORD2
 getExternal	KEYWORD2
 getInternal	KEYWORD2
-isExternalOutOfRange()	KEYWORD2
-isInternalOutOfRange()	KEYWORD2
-isOverUnderVoltage()	KEYWORD2
-isOpen()	KEYWORD2
-hasError()	KEYWORD2
+isExternalOutOfRange	KEYWORD2
+isInternalOutOfRange	KEYWORD2
+isOverUnderVoltage	KEYWORD2
+isOpen	KEYWORD2
+hasError	KEYWORD2
 
 # Constants (LITERAL1)
