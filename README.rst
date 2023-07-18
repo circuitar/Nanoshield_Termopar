@@ -28,14 +28,14 @@ The following examples_ are provided:
 - TemperatureDatalogger_: read temperature from multiple Termopar Nanoshields and log it into an SD card.
 - OpenCircuitDetection_: disable the open circuit detection mode or change its parameters. Might be useful when using long thermocouple wires.
 
-.. _`Termopar Nanoshield`: https://www.circuitar.com/nanoshields/modules/termopar/
-.. _Circuitar: https://www.circuitar.com/
+.. _`Termopar Nanoshield`: https://www.circuitar.com.br/nanoshields/modulos/termopar/
+.. _Circuitar: https://www.circuitar.com.br/
 .. _examples: https://github.com/circuitar/Nanoshield_Termopar/tree/master/examples
 .. _SerialThermometer: https://github.com/circuitar/Nanoshield_Termopar/blob/master/examples/SerialThermometer/SerialThermometer.ino
 .. _MultiThermometer: https://github.com/circuitar/Nanoshield_Termopar/blob/master/examples/MultiThermometer/MultiThermometer.ino
 .. _MultiThermometerCSV: https://github.com/circuitar/Nanoshield_Termopar/blob/master/examples/MultiThermometerCSV/MultiThermometerCSV.ino
 .. _LcdThermometer: https://github.com/circuitar/Nanoshield_Termopar/blob/master/examples/LcdThermometer/LcdThermometer.ino
-.. _`LCD Nanoshield`: https://www.circuitar.com/nanoshields/modules/lcd/
+.. _`LCD Nanoshield`: https://www.circuitar.com.br/nanoshields/modulos/lcd/
 .. _RawVoltage: https://github.com/circuitar/Nanoshield_Termopar/blob/master/examples/RawVoltage/RawVoltage.ino
 .. _TemperatureDatalogger: https://github.com/circuitar/Nanoshield_Termopar/blob/master/examples/TemperatureDatalogger/TemperatureDatalogger.ino
 .. _OpenCircuitDetection: https://github.com/circuitar/Nanoshield_Termopar/blob/master/examples/OpenCircuitDetection/OpenCircuitDetection.ino
